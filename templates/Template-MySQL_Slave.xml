@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>2.0</version>
+    <date>2015-02-19T09:56:22Z</date>
+    <groups>
+        <group>
+            <name>Generic Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template-MySQL_Slave</template>
+            <name>Template-MySQL_Slave</name>
+            <groups>
+                <group>
+                    <name>Generic Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>MySQL - Slave replication</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>MySQL slave replication error number</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>mysql.replication[last_errno]</key>
+                    <delay>60</delay>
+                    <history>7</history>
+                    <trends>30</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MySQL - Slave replication</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>MySQL slave replication IO thread</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>mysql.replication[io_thread]</key>
+                    <delay>60</delay>
+                    <history>7</history>
+                    <trends>30</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MySQL - Slave replication</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>MySQL - IO thread status</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>MySQL slave replication read/exec master log position status</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>mysql.replication[sync_log_pos]</key>
+                    <delay>120</delay>
+                    <history>7</history>
+                    <trends>30</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>3</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MySQL - Slave replication</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>MySQL - Master read/exec log position status</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>MySQL slave replication SQL thread</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>mysql.replication[sql_thread]</key>
+                    <delay>60</delay>
+                    <history>7</history>
+                    <trends>30</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MySQL - Slave replication</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>MySQL - SQL thread status</name>
+                    </valuemap>
+                </item>
+                <item>
+                    <name>Number of seconds that the slave SQL thread is behind processing the master binary log</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>mysql.replication[lag]</key>
+                    <delay>60</delay>
+                    <history>7</history>
+                    <trends>30</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>s</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MySQL - Slave replication</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>MySQL replication tables discovery</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>mysql.replication.discovery</key>
+                    <delay>3600</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <filter>:</filter>
+                    <lifetime>3</lifetime>
+                    <description/>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Slave replication status on table {#DATABASE_NAME}.{#TABLE_NAME}</name>
+                            <type>0</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>mysql.replication.checksum[{#DATABASE_NAME}.{#TABLE_NAME}]</key>
+                            <delay>300</delay>
+                            <history>7</history>
+                            <trends>30</trends>
+                            <status>0</status>
+                            <value_type>0</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>MySQL - Slave replication</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>MySQL - Slave replication table status</name>
+                            </valuemap>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>({TRIGGER.VALUE}=0 &amp; {Template-MySQL_Slave:mysql.replication.checksum[{#DATABASE_NAME}.{#TABLE_NAME}].count(#3,1,&quot;eq&quot;)}=3) | ({TRIGGER.VALUE}=1 &amp; {Template-MySQL_Slave:mysql.replication.checksum[{#DATABASE_NAME}.{#TABLE_NAME}].count(#3,1,&quot;eq&quot;)}&gt;0)</expression>
+                            <name>MySQL replication is out of sync on table {#DATABASE_NAME}.{#TABLE_NAME}</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
+            </discovery_rules>
+            <macros/>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>({TRIGGER.VALUE}=0 &amp; ({Template-MySQL_Slave:mysql.replication[lag].count(#6,0,&quot;ne&quot;)}=6 | {Template-MySQL_Slave:mysql.replication[lag].count(#4,-1,&quot;eq&quot;)}=4)) | ({TRIGGER.VALUE}=1 &amp; {Template-MySQL_Slave:mysql.replication[lag].count(#10,0,&quot;gt&quot;)}&gt;0)</expression>
+            <name>MySQL slave is lagging behind its master ({ITEM.VALUE}s)</name>
+            <url/>
+            <status>1</status>
+            <priority>3</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>MySQL slave replication SQL thread is not running</name>
+                    <expression>({TRIGGER.VALUE}=0 &amp; {Template-MySQL_Slave:mysql.replication[sql_thread].last(0)}=1) | ({TRIGGER.VALUE}=1 &amp; {Template-MySQL_Slave:mysql.replication[sql_thread].count(#5,0,&quot;gt&quot;)}&gt;0)</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>({TRIGGER.VALUE}=0 &amp; {Template-MySQL_Slave:mysql.replication[io_thread].last(0)}=1) | ({TRIGGER.VALUE}=1 &amp; {Template-MySQL_Slave:mysql.replication[io_thread].count(#5,0,&quot;gt&quot;)}&gt;0)</expression>
+            <name>MySQL slave replication IO thread is not running</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>({TRIGGER.VALUE}=0 &amp; {Template-MySQL_Slave:mysql.replication[sync_log_pos].last(0)}=1) | ({TRIGGER.VALUE}=1 &amp; {Template-MySQL_Slave:mysql.replication[sync_log_pos].count(#3,1,&quot;eq&quot;)}&gt;0)</expression>
+            <name>MySQL slave replication read/exec master log positions status</name>
+            <url/>
+            <status>1</status>
+            <priority>3</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>MySQL slave is lagging behind its master ({ITEM.VALUE}s)</name>
+                    <expression>({TRIGGER.VALUE}=0 &amp; ({Template-MySQL_Slave:mysql.replication[lag].count(#6,0,&quot;ne&quot;)}=6 | {Template-MySQL_Slave:mysql.replication[lag].count(#4,-1,&quot;eq&quot;)}=4)) | ({TRIGGER.VALUE}=1 &amp; {Template-MySQL_Slave:mysql.replication[lag].count(#10,0,&quot;gt&quot;)}&gt;0)</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>({TRIGGER.VALUE}=0 &amp; {Template-MySQL_Slave:mysql.replication[sql_thread].last(0)}=1) | ({TRIGGER.VALUE}=1 &amp; {Template-MySQL_Slave:mysql.replication[sql_thread].count(#5,0,&quot;gt&quot;)}&gt;0)</expression>
+            <name>MySQL slave replication SQL thread is not running</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>({TRIGGER.VALUE}=0 &amp; {Template-MySQL_Slave:mysql.replication[last_errno].last(0)}#0) | ({TRIGGER.VALUE}=1 &amp; {Template-MySQL_Slave:mysql.replication[last_errno].count(#3,0,&quot;ne&quot;)}&gt;0)</expression>
+            <name>MySQL slave replication stopped with error {ITEM.VALUE}</name>
+            <url/>
+            <status>0</status>
+            <priority>3</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+    </triggers>
+</zabbix_export>
