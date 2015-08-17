@@ -48,9 +48,6 @@ which mysqladmin &>/dev/null && MYSQLADMIN_BIN=$(which mysqladmin) || {
 }
 test ! -x $MYSQLADMIN_BIN && { echo "Unable to execute $MYSQLADMIN_BIN" >&2; exit 1; }
 
-# plugin cache directory
-PLUGIN_CACHE_DIR=$ZBX_PLUGINS_CACHE_DIR/mysql
-
 slave_host=${MYSQL_SLAVE_HOST:-localhost}
 slave_user=$MYSQL_SLAVE_USER
 slave_password=$MYSQL_SLAVE_PASSWORD
