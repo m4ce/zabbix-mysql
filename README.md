@@ -2,7 +2,7 @@
 
 Extensive monitoring plugin for MySQL, including operational status, metrics, command counters AND slave-to-master monitoring by comparing table checksums.
 
-The slave monitoring is implemented through an extensive use of the powerful <b>low-level discovery</b> features available in Zabbix. As a result, only what gets replicated on the slave is actually monitored.
+The slave monitoring is implemented through an extensive use of the powerful **low-level discovery** features available in Zabbix. As a result, only what gets replicated on the slave is actually monitored.
 
 ## Installation
 Depending on how you distribute your plugins around and respective Zabbix configuration, you would at least need to set up the following userparameters on the agent side:
@@ -16,7 +16,7 @@ UserParameter=mysql.replication.discovery,<path_to_your_plugins>/mysql.sh replic
 
 You would then need to import the templates into Zabbix and link them to the hosts you wish to monitor.
 
-<u>Before importing the template</u>, you are required to add the following value mappings before importing the templates, so that sampled values can be mapped to human readable states (makes latest data look prettier).
+**Before importing the template**, you are required to add the following value mappings before importing the templates, so that sampled values can be mapped to human readable states (makes latest data look prettier).
 
 ```
 mysql> SELECT name, value, newvalue FROM valuemaps INNER JOIN mappings ON valuemaps.valuemapid = mappings.valuemapid WHERE name LIKE 'MySQL%';
@@ -38,7 +38,7 @@ mysql> SELECT name, value, newvalue FROM valuemaps INNER JOIN mappings ON valuem
 ```
 
 ## Configuration
-By default, the plugin makes use of the <b>$HOME/.my.cnf</b> config file to connect to the local MySQL instance. You should probably look at distributing this via Puppet.
+By default, the plugin makes use of the **$HOME/.my.cnf** config file to connect to the local MySQL instance. You should probably look at distributing this via Puppet.
 
 If you run zabbix-agentd as root, you would have to configure /root/.my.cnf as follows:
 
@@ -49,7 +49,7 @@ host=localhost
 password=<your_password>
 ```
 
-When it comes to slave monitoring, you would need to make sure that the following environment variables are defined in <b>mysql.cfg</b> in the same directory where the plugins gets installed.
+When it comes to slave monitoring, you would need to make sure that the following environment variables are defined in **mysql.cfg** in the same directory where the plugins gets installed.
 
 ```
 export MYSQL_MASTER_HOST="<master_host>"
