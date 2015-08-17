@@ -16,7 +16,7 @@ UserParameter=mysql.replication.discovery,<path_to_your_plugins>/mysql.sh replic
 
 You would then need to import the templates into Zabbix and link them to the hosts you wish to monitor.
 
-Ideally, you would also add the following value mappings before importing the templates, so that sampled values can be mapped to human readable states (makes latest data look prettier).
+<u>Before importing the template</u>, you are required to add the following value mappings before importing the templates, so that sampled values can be mapped to human readable states (makes latest data look prettier).
 
 ```
 mysql> SELECT name, value, newvalue FROM valuemaps INNER JOIN mappings ON valuemaps.valuemapid = mappings.valuemapid WHERE name LIKE 'MySQL%';
