@@ -25,5 +25,5 @@ function mysql_batch_query() {
   local opts=$1
   local query=$2
 
-  $MYSQL_BIN $opts $MYSQL_OPTS --batch --skip-column-names -e "$query"
+  $MYSQL_BIN $opts $MYSQL_OPTS --batch -e "$query"
 }
