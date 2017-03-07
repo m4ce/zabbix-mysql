@@ -4,8 +4,8 @@
 #
 # Author: Matteo Cerutti <matteo.cerutti@hotmail.co.uk>
 #
-
-MYCNF_PATH="/usr/share/zabbix/.my.cnf"
+ZBX_HOME=${ZBX_HOME:-/usr/share/zabbix}
+MYCNF_PATH="$ZBX_HOME/.my.cnf"
 
 # default timeout in seconds
 MYSQL_TIMEOUT=${MYSQL_TIMEOUT:-5}
