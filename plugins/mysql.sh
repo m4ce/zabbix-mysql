@@ -20,7 +20,7 @@ function showhelp() {
           ;;
 
         *)
-          echo "$1 <last_errno|lag|io_thread|sql_thread|sync_log_pos|discovery|checksum>"
+          echo "$1 <last_errno|lag|io_thread|io_state|last_io_errno|last_io_error|sql_thread|last_sql_error||sync_log_pos|discovery|checksum>"
       esac
       ;;
 
@@ -390,6 +390,11 @@ EOF
         test -n "$errno" && echo $errno
         ;;
 
+      "last_io_errno")
+        io_errno=$(mysql_batch_query "$slave_opts" "show slave status\G" | grep -i "Last_IO_Errno:" | sed -e 's/\s*//g' | awk -F ':' '{ print $2 }')
+        test -n "$io_errno" && echo $io_errno
+        ;;
+
       "lag")
         lag=$(mysql_batch_query "$slave_opts" "show slave status\G" | grep -i "Seconds_Behind_Master:" | sed -e 's/\s*//g' | awk -F ':' '{ print $2 }' | sed -e 's/^NULL$/-1/')
         test -n "$lag" && echo $lag
@@ -401,7 +406,23 @@ EOF
         case $io_thread_status in
           "yes") echo 0 ;;
           "no") echo 1 ;;
+          "connecting") echo -1 ;;
         esac
+        ;;
+
+      "io_state")
+        io_state=$(mysql_batch_query "$slave_opts" "show slave status\G" | grep -i "Slave_IO_State:" | awk -F ':' '{ print $2 }')
+        test -n "$io_state" && echo $io_state
+        ;;
+
+      "last_io_error")
+        last_io_error=$(mysql_batch_query "$slave_opts" "show slave status\G" | grep -i "Last_IO_Error:" | awk -F ':' '{ print $2 }')
+        test -n "$last_io_error" && echo $last_io_error
+        ;;
+
+      "last_sql_error")
+        last_sql_error=$(mysql_batch_query "$slave_opts" "show slave status\G" | grep -i "Last_SQL_Error:" | awk -F ':' '{ print $2 }')
+        test -n "$last_sql_error" && echo $last_sql_error
         ;;
 
       "sql_thread")

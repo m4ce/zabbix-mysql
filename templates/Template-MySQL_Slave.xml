@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2015-02-19T09:56:22Z</date>
+    <date>2016-12-06T14:35:31Z</date>
     <groups>
         <group>
             <name>Generic Templates</name>
@@ -11,6 +11,7 @@
         <template>
             <template>Template-MySQL_Slave</template>
             <name>Template-MySQL_Slave</name>
+            <description/>
             <groups>
                 <group>
                     <name>Generic Templates</name>
@@ -23,12 +24,12 @@
             </applications>
             <items>
                 <item>
-                    <name>MySQL slave replication error number</name>
+                    <name>MySQL slave replication IO error number</name>
                     <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>mysql.replication[last_errno]</key>
+                    <key>mysql.replication[last_io_errno]</key>
                     <delay>60</delay>
                     <history>7</history>
                     <trends>30</trends>
@@ -63,6 +64,50 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>MySQL slave replication IO state</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>mysql.replication[io_state]</key>
+                    <delay>60</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>4</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MySQL - Slave replication</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
                 </item>
                 <item>
                     <name>MySQL slave replication IO thread</name>
@@ -107,6 +152,93 @@
                     <valuemap>
                         <name>MySQL - IO thread status</name>
                     </valuemap>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>MySQL slave replication last io error</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>mysql.replication[last_io_error]</key>
+                    <delay>60</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>1</status>
+                    <value_type>4</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MySQL - Slave replication</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>MySQL slave replication last sql error</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>mysql.replication[last_sql_error]</key>
+                    <delay>60</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>1</status>
+                    <value_type>4</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MySQL - Slave replication</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
                 </item>
                 <item>
                     <name>MySQL slave replication read/exec master log position status</name>
@@ -151,6 +283,50 @@
                     <valuemap>
                         <name>MySQL - Master read/exec log position status</name>
                     </valuemap>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>MySQL slave replication SQL error number</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>mysql.replication[last_errno]</key>
+                    <delay>60</delay>
+                    <history>7</history>
+                    <trends>30</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MySQL - Slave replication</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
                 </item>
                 <item>
                     <name>MySQL slave replication SQL thread</name>
@@ -195,6 +371,7 @@
                     <valuemap>
                         <name>MySQL - SQL thread status</name>
                     </valuemap>
+                    <logtimefmt/>
                 </item>
                 <item>
                     <name>Number of seconds that the slave SQL thread is behind processing the master binary log</name>
@@ -237,6 +414,7 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
                 </item>
             </items>
             <discovery_rules>
@@ -265,7 +443,11 @@
                     <publickey/>
                     <privatekey/>
                     <port/>
-                    <filter>:</filter>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
                     <lifetime>3</lifetime>
                     <description/>
                     <item_prototypes>
@@ -312,11 +494,12 @@
                             <valuemap>
                                 <name>MySQL - Slave replication table status</name>
                             </valuemap>
+                            <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>({TRIGGER.VALUE}=0 &amp; {Template-MySQL_Slave:mysql.replication.checksum[{#DATABASE_NAME}.{#TABLE_NAME}].count(#3,1,&quot;eq&quot;)}=3) | ({TRIGGER.VALUE}=1 &amp; {Template-MySQL_Slave:mysql.replication.checksum[{#DATABASE_NAME}.{#TABLE_NAME}].count(#3,1,&quot;eq&quot;)}&gt;0)</expression>
+                            <expression>({TRIGGER.VALUE}=0 and {Template-MySQL_Slave:mysql.replication.checksum[{#DATABASE_NAME}.{#TABLE_NAME}].count(#3,1,&quot;eq&quot;)}=3) or ({TRIGGER.VALUE}=1 and {Template-MySQL_Slave:mysql.replication.checksum[{#DATABASE_NAME}.{#TABLE_NAME}].count(#3,1,&quot;eq&quot;)}&gt;0)</expression>
                             <name>MySQL replication is out of sync on table {#DATABASE_NAME}.{#TABLE_NAME}</name>
                             <url/>
                             <status>0</status>
@@ -336,7 +519,27 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>({TRIGGER.VALUE}=0 &amp; ({Template-MySQL_Slave:mysql.replication[lag].count(#6,0,&quot;ne&quot;)}=6 | {Template-MySQL_Slave:mysql.replication[lag].count(#4,-1,&quot;eq&quot;)}=4)) | ({TRIGGER.VALUE}=1 &amp; {Template-MySQL_Slave:mysql.replication[lag].count(#10,0,&quot;gt&quot;)}&gt;0)</expression>
+            <expression>{Template-MySQL_Slave:mysql.replication[io_thread].last()}&lt;&gt;0</expression>
+            <name>IO thread is not running</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template-MySQL_Slave:mysql.replication[lag].last()}&lt;&gt;0</expression>
+            <name>Lagging behind its master ({ITEM.VALUE}s)</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>({TRIGGER.VALUE}=0 and ({Template-MySQL_Slave:mysql.replication[lag].count(#6,0,&quot;ne&quot;)}=6 or {Template-MySQL_Slave:mysql.replication[lag].count(#4,-1,&quot;eq&quot;)}=4)) or ({TRIGGER.VALUE}=1 and {Template-MySQL_Slave:mysql.replication[lag].count(#10,0,&quot;gt&quot;)}&gt;0)</expression>
             <name>MySQL slave is lagging behind its master ({ITEM.VALUE}s)</name>
             <url/>
             <status>1</status>
@@ -346,22 +549,32 @@
             <dependencies>
                 <dependency>
                     <name>MySQL slave replication SQL thread is not running</name>
-                    <expression>({TRIGGER.VALUE}=0 &amp; {Template-MySQL_Slave:mysql.replication[sql_thread].last(0)}=1) | ({TRIGGER.VALUE}=1 &amp; {Template-MySQL_Slave:mysql.replication[sql_thread].count(#5,0,&quot;gt&quot;)}&gt;0)</expression>
+                    <expression>({TRIGGER.VALUE}=0 and {Template-MySQL_Slave:mysql.replication[sql_thread].last()}&lt;&gt;0) or ({TRIGGER.VALUE}=1 and {Template-MySQL_Slave:mysql.replication[sql_thread].last()}&lt;&gt;0)</expression>
                 </dependency>
             </dependencies>
         </trigger>
         <trigger>
-            <expression>({TRIGGER.VALUE}=0 &amp; {Template-MySQL_Slave:mysql.replication[io_thread].last(0)}=1) | ({TRIGGER.VALUE}=1 &amp; {Template-MySQL_Slave:mysql.replication[io_thread].count(#5,0,&quot;gt&quot;)}&gt;0)</expression>
+            <expression>({TRIGGER.VALUE}=0 and {Template-MySQL_Slave:mysql.replication[last_io_errno].last(0)}&lt;&gt;0) or ({TRIGGER.VALUE}=1 and {Template-MySQL_Slave:mysql.replication[last_io_errno].count(#3,0,&quot;ne&quot;)}&gt;0)</expression>
+            <name>MySQL slave replication IO stopped with error {ITEM.VALUE}</name>
+            <url/>
+            <status>1</status>
+            <priority>3</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>({TRIGGER.VALUE}=0 and {Template-MySQL_Slave:mysql.replication[io_thread].last(0)}=1) or ({TRIGGER.VALUE}=1 and {Template-MySQL_Slave:mysql.replication[io_thread].count(#5,0,&quot;gt&quot;)}&gt;0)</expression>
             <name>MySQL slave replication IO thread is not running</name>
             <url/>
-            <status>0</status>
+            <status>1</status>
             <priority>4</priority>
             <description/>
             <type>0</type>
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>({TRIGGER.VALUE}=0 &amp; {Template-MySQL_Slave:mysql.replication[sync_log_pos].last(0)}=1) | ({TRIGGER.VALUE}=1 &amp; {Template-MySQL_Slave:mysql.replication[sync_log_pos].count(#3,1,&quot;eq&quot;)}&gt;0)</expression>
+            <expression>({TRIGGER.VALUE}=0 and {Template-MySQL_Slave:mysql.replication[sync_log_pos].last(0)}=1) or ({TRIGGER.VALUE}=1 and {Template-MySQL_Slave:mysql.replication[sync_log_pos].count(#3,1,&quot;eq&quot;)}&gt;0)</expression>
             <name>MySQL slave replication read/exec master log positions status</name>
             <url/>
             <status>1</status>
@@ -371,26 +584,46 @@
             <dependencies>
                 <dependency>
                     <name>MySQL slave is lagging behind its master ({ITEM.VALUE}s)</name>
-                    <expression>({TRIGGER.VALUE}=0 &amp; ({Template-MySQL_Slave:mysql.replication[lag].count(#6,0,&quot;ne&quot;)}=6 | {Template-MySQL_Slave:mysql.replication[lag].count(#4,-1,&quot;eq&quot;)}=4)) | ({TRIGGER.VALUE}=1 &amp; {Template-MySQL_Slave:mysql.replication[lag].count(#10,0,&quot;gt&quot;)}&gt;0)</expression>
+                    <expression>({TRIGGER.VALUE}=0 and ({Template-MySQL_Slave:mysql.replication[lag].count(#6,0,&quot;ne&quot;)}=6 or {Template-MySQL_Slave:mysql.replication[lag].count(#4,-1,&quot;eq&quot;)}=4)) or ({TRIGGER.VALUE}=1 and {Template-MySQL_Slave:mysql.replication[lag].count(#10,0,&quot;gt&quot;)}&gt;0)</expression>
                 </dependency>
             </dependencies>
         </trigger>
         <trigger>
-            <expression>({TRIGGER.VALUE}=0 &amp; {Template-MySQL_Slave:mysql.replication[sql_thread].last(0)}=1) | ({TRIGGER.VALUE}=1 &amp; {Template-MySQL_Slave:mysql.replication[sql_thread].count(#5,0,&quot;gt&quot;)}&gt;0)</expression>
+            <expression>({TRIGGER.VALUE}=0 and {Template-MySQL_Slave:mysql.replication[last_errno].last(0)}&lt;&gt;0) or ({TRIGGER.VALUE}=1 and {Template-MySQL_Slave:mysql.replication[last_errno].count(#3,0,&quot;ne&quot;)}&gt;0)</expression>
+            <name>MySQL slave replication SQL stopped with error {ITEM.VALUE}</name>
+            <url/>
+            <status>1</status>
+            <priority>3</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>({TRIGGER.VALUE}=0 and {Template-MySQL_Slave:mysql.replication[sql_thread].last()}&lt;&gt;0) or ({TRIGGER.VALUE}=1 and {Template-MySQL_Slave:mysql.replication[sql_thread].last()}&lt;&gt;0)</expression>
             <name>MySQL slave replication SQL thread is not running</name>
             <url/>
-            <status>0</status>
+            <status>1</status>
             <priority>4</priority>
             <description/>
             <type>0</type>
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>({TRIGGER.VALUE}=0 &amp; {Template-MySQL_Slave:mysql.replication[last_errno].last(0)}#0) | ({TRIGGER.VALUE}=1 &amp; {Template-MySQL_Slave:mysql.replication[last_errno].count(#3,0,&quot;ne&quot;)}&gt;0)</expression>
-            <name>MySQL slave replication stopped with error {ITEM.VALUE}</name>
+            <expression>{Template-MySQL_Slave:mysql.replication[sql_thread].last()}&lt;&gt;0 and {Template-MySQL_Slave:mysql.replication[io_thread].last()}&lt;&gt;0</expression>
+            <name>Slave is stopped</name>
+            <url/>
+            <status>1</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template-MySQL_Slave:mysql.replication[sql_thread].last()}&lt;&gt;0</expression>
+            <name>SQL thread is not running</name>
             <url/>
             <status>0</status>
-            <priority>3</priority>
+            <priority>4</priority>
             <description/>
             <type>0</type>
             <dependencies/>
