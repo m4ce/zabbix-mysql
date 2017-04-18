@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.2</version>
+    <date>2017-04-15T19:27:16Z</date>
+    <value_maps>
+        <value_map>
+            <name>MySQL - IO thread status</name>
+            <mappings>
+                <mapping>
+                    <value>-1</value>
+                    <newvalue>Disabled</newvalue>
+                </mapping>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Running</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Not running</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>MySQL - Master read/exec log position status</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>In sync</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Out of sync</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>MySQL - Slave replication table status</name>
+            <mappings>
+                <mapping>
+                    <value>-1</value>
+                    <newvalue>Absent</newvalue>
+                </mapping>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Identical</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Different</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>MySQL - SQL thread status</name>
+            <mappings>
+                <mapping>
+                    <value>-1</value>
+                    <newvalue>Disabled</newvalue>
+                </mapping>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Running</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Not running</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>
