@@ -338,7 +338,7 @@ EOF
             count=$((count+1))
           fi
         done <<EOF
-$(mysql_batch_query "$slave_opts" "SELECT TABLE_SCHEMA,TABLE_NAME FROM information_schema.tables WHERE TABLE_TYPE != 'VIEW' $query")
+$(mysql_batch_query "$slave_opts --skip-column-names" "SELECT TABLE_SCHEMA,TABLE_NAME FROM information_schema.tables WHERE TABLE_TYPE != 'VIEW' $query")
 EOF
         [ $count -gt 0 ] && echo "    }"
         echo "  ]"
