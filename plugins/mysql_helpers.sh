@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Description: helpers for MySQL 
+# Description: helpers for MySQL
 #
 # Author: Matteo Cerutti <matteo.cerutti@hotmail.co.uk>
 #
@@ -21,9 +21,9 @@ test ! -x $MYSQL_BIN && { echo "Unable to execute $MYSQL_BIN" >&2; exit 1; }
 #
 # performs a query in batch mode
 #
-function mysql_batch_query() {
+function mysql_batch_query {
   local opts=$1
   local query=$2
 
-  $MYSQL_BIN $opts $MYSQL_OPTS --batch -e "$query"
+  $MYSQL_BIN $opts $MYSQL_OPTS --batch -e "$query" 2>/dev/null
 }

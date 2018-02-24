@@ -338,7 +338,7 @@ EOF
             count=$((count+1))
           fi
         done <<EOF
-$(mysql_batch_query "$slave_opts" "SELECT TABLE_SCHEMA,TABLE_NAME FROM information_schema.tables WHERE TABLE_TYPE != 'VIEW' $query")
+$(mysql_batch_query "$slave_opts --skip-column-names" "SELECT TABLE_SCHEMA,TABLE_NAME FROM information_schema.tables WHERE TABLE_TYPE != 'VIEW' $query")
 EOF
         [ $count -gt 0 ] && echo "    }"
         echo "  ]"
@@ -357,12 +357,12 @@ EOF
 
         retry_count=0
         while [ $retry_count -lt $checksum_retry ]; do
-          master_checksum=$(mysql_batch_query "$master_opts" "CHECKSUM TABLE $target" | awk '{ print $2 }')
-          slave_checksum=$(mysql_batch_query "$slave_opts" "CHECKSUM TABLE $target" | awk '{ print $2 }')
+          master_checksum=$(mysql_batch_query "${master_opts} --skip-column-names" "CHECKSUM TABLE $target" | awk '{ print $2 }')
+          slave_checksum=$(mysql_batch_query "${slave_opts} --skip-column-names" "CHECKSUM TABLE $target" | awk '{ print $2 }')
 
           if [ $verbose -eq 1 ]; then
-            echo "master_checksum: $master_checksum"
-            echo "slave_checksum: $slave_checksum"
+            echo "master_checksum: |${master_checksum}|"
+            echo "slave_checksum: |${slave_checksum}|"
           fi
 
           if [[ "$master_checksum" != "NULL" && "$slave_checksum" != "NULL" ]]; then
