@@ -21,7 +21,7 @@ test ! -x $MYSQL_BIN && { echo "Unable to execute $MYSQL_BIN" >&2; exit 1; }
 #
 # performs a query in batch mode
 #
-function mysql_batch_query() {
+function mysql_batch_query {
   local opts=$1
   local query=$2
 
