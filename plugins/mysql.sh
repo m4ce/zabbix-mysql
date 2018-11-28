@@ -183,7 +183,7 @@ case $1 in
             case $key in
               "Replicate_Do_DB")
                 for db in $(echo "$value" | tr ',' ' '); do
-                  test -z "$repicate_do_db" && replicate_do_db="$db" || replicate_do_db="$replicate_do_db $db"
+                  test -z "$replicate_do_db" && replicate_do_db="$db" || replicate_do_db="$replicate_do_db $db"
                 done
                 ;;
 
